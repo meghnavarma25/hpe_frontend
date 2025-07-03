@@ -24,7 +24,11 @@ export const DarkGridHero = () => {
       }),
     });
       const data = await result.json();
-      setPrediction(data.prediction.join(' '));
+      if (Array.isArray(data.prediction)) {
+        setPrediction(data.prediction.join(' '));
+      } else {
+        setPrediction(data.prediction);
+      }
     } catch (error) {
       console.error("Prediction error:", error);
     }
