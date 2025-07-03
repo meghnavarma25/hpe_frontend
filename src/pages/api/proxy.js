@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   try {
-    const backendRes = await fetch("http://65.0.138.143/classify", {
+    const backendRes = await fetch("http://65.2.83.156/classify", {
       method: req.method,
       headers: {
         "Content-Type": "application/json",
